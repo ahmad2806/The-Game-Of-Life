@@ -1,0 +1,8 @@
+functions                       => CamelCase
+parameters                      => CamelCase
+
+bools                           => isName
+functions passed as argument    => nameMethod
+
+files                           => file_name
+class                           => Class
