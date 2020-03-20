@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Header extends AppBar {
-  static final logoImage = new Image.asset('images/logo.png');
+  static final logoImage = new Image.asset('assets/images/logo.png');
 
   static Widget getProfileHeader() {
     return AppBar(
