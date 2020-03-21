@@ -6,3 +6,7 @@ functions passed as argument    => nameMethod
 
 files                           => file_name
 class                           => Class
+
+
+screen dart files               => pla_screen
+widget item file                => pla_item
