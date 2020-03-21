@@ -6,7 +6,15 @@ class Header extends AppBar {
 
   static Widget getProfileHeader() {
     return AppBar(
-      title: logoImage,
+      leading: IconButton(
+        icon: const Icon(Icons.arrow_back_ios),
+        tooltip: 'Show Snackbar',
+        onPressed: () {},
+      ),
+      title: Container(
+        alignment: Alignment.center,
+        child: logoImage,
+      ),
       backgroundColor: Colors.transparent,
       actions: <Widget>[
         IconButton(
@@ -20,7 +28,10 @@ class Header extends AppBar {
 
   static Widget getCleanHeader() {
     return AppBar(
-      title: logoImage,
+      title: Container(
+        alignment: Alignment.center,
+        child: logoImage,
+      ),
       backgroundColor: Colors.transparent,
     );
   }
@@ -32,7 +43,10 @@ class Header extends AppBar {
         tooltip: 'Show Snackbar',
         onPressed: () {},
       ),
-      title: logoImage,
+      title: Container(
+        alignment: Alignment.center,
+        child: logoImage,
+      ),
       backgroundColor: Colors.transparent,
       actions: <Widget>[
         IconButton(
