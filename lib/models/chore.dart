@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class chore {
-  final icon;
-  final color;
-  chore({this.icon, this.color});
+class Chore {
+  final String image;
+  Color backgroundColor;
+  Chore({this.image, this.backgroundColor});
 }
