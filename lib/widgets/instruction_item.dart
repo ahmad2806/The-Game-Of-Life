@@ -23,7 +23,7 @@ class InstructionItem extends StatelessWidget {
                     leading: Icon(
                       Icons.star,
                       size: 54,
-                      color: Colors.orange,
+                      color: Theme.of(context).accentColor,
                     ),
                     title: Padding(
                       padding: EdgeInsets.only(

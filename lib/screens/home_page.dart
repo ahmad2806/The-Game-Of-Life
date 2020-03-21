@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_game/models/instruction.dart';
-import 'package:the_game/screens/chore_page.dart';
+import 'package:the_game/screens/chore_screen.dart';
 import 'package:the_game/screens/instruction_screen.dart';
 import 'package:the_game/screens/profile_page.dart';
 import 'package:the_game/screens/upper_page.dart';
@@ -11,15 +11,11 @@ class HomePage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-//                appBar: AppBar(
-//                  title: Text(title),
-//                ),
         body: SafeArea(
           child: Column(
             children: <Widget>[
               Container(
                 height: MediaQuery.of(context).size.height / 3,
-// Also Including Tab-bar height.
                 child: UpperPage(),
               ),
 
@@ -45,7 +41,7 @@ class HomePage extends StatelessWidget {
               PreferredSize(
                 preferredSize: Size.fromHeight(50.0),
                 child: TabBar(
-                  labelColor: Colors.black,
+                  labelColor: Theme.of(context).primaryColor,
                   tabs: [
                     Tab(
                       icon: Icon(Icons.message, size: 34,),

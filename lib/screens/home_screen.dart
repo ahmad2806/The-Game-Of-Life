@@ -50,12 +50,12 @@ class _HomeState extends State<HomeScreen> {
           Icons.star,
           size: 40,
         ),
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Theme.of(context).accentColor,
         onPressed: () => _startCheckYourChores(context),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        color: Colors.black,
+        color: Theme.of(context).primaryColor,
         shape: CircularNotchedRectangle(),
         notchMargin: 10,
         child: Container(
@@ -80,13 +80,13 @@ class _HomeState extends State<HomeScreen> {
                       children: <Widget>[
                         Icon(
                           Icons.message,
-                          color: currentTab == 0 ? Colors.blue : Colors.white,
+                          color: currentTab == 0 ? Theme.of(context).accentColor : Colors.white,
                           size: 30,
                         ),
                         Text(
                           'Instructions',
                           style: TextStyle(
-                            color: currentTab == 0 ? Colors.blue : Colors.white,
+                            color: currentTab == 0 ? Theme.of(context).accentColor : Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w300,
                           ),
@@ -116,13 +116,13 @@ class _HomeState extends State<HomeScreen> {
                       children: <Widget>[
                         Icon(
                           Icons.account_box,
-                          color: currentTab == 2 ? Colors.blue : Colors.white,
+                          color: currentTab == 2 ? Theme.of(context).accentColor : Colors.white,
                           size: 30,
                         ),
                         Text(
                           'Account',
                           style: TextStyle(
-                            color: currentTab == 2 ? Colors.blue : Colors.white,
+                            color: currentTab == 2 ? Theme.of(context).accentColor: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w300,
                           ),

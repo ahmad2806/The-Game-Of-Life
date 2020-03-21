@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import '../widgets/utils/header.dart';
 
 class AccountScreen extends StatelessWidget {
-  final String _fullName = "Nick Frost";
-  final String _status = "Software Developer";
-  final String _bio =
-      "\"Hi, I am a Freelance developer working for hourly basis. If you wants to contact me to build your product leave a message.\"";
+  final String _fullName = "Thaer TG";
+  final String _status = "Entrepreneur";
+  final String _bio = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type";
   final String _followers = "173";
   final String _posts = "24";
   final String _scores = "450";
@@ -43,10 +42,10 @@ class AccountScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildFullName() {
+  Widget _buildFullName(BuildContext context) {
     TextStyle _nameTextStyle = TextStyle(
       fontFamily: 'Roboto',
-      color: Colors.black,
+      color: Theme.of(context).primaryColor,
       fontSize: 28.0,
       fontWeight: FontWeight.w700,
     );
@@ -68,7 +67,7 @@ class AccountScreen extends StatelessWidget {
         _status,
         style: TextStyle(
           fontFamily: 'Spectral',
-          color: Colors.black,
+          color: Theme.of(context).primaryColor,
           fontSize: 20.0,
           fontWeight: FontWeight.w300,
         ),
@@ -76,10 +75,10 @@ class AccountScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildStatItem(String label, String count) {
+  Widget _buildStatItem(BuildContext context, String label, String count) {
     TextStyle _statLabelTextStyle = TextStyle(
       fontFamily: 'Roboto',
-      color: Colors.black,
+      color: Theme.of(context).primaryColor,
       fontSize: 16.0,
       fontWeight: FontWeight.w200,
     );
@@ -105,7 +104,7 @@ class AccountScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildStatContainer() {
+  Widget _buildStatContainer(BuildContext context) {
     return Container(
       height: 60.0,
       margin: EdgeInsets.only(top: 8.0),
@@ -115,9 +114,9 @@ class AccountScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          _buildStatItem("Followers", _followers),
-          _buildStatItem("Posts", _posts),
-          _buildStatItem("Scores", _scores),
+          _buildStatItem(context, "Followers", _followers),
+          _buildStatItem(context, "Posts", _posts),
+          _buildStatItem(context, "Scores", _scores),
         ],
       ),
     );
@@ -229,7 +228,7 @@ class AccountScreen extends StatelessWidget {
                 children: <Widget>[
                   SizedBox(height: screenSize.height / 4),
                   _buildProfileImage(),
-                  _buildFullName(),
+                  _buildFullName(context),
                   _buildBio(context),
                 ],
               ),
