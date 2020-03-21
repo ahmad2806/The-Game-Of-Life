@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class UpperPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final _screenSize = MediaQuery.of(context).size;
+    // final _screenSize = MediaQuery.of(context).size;
 
     return Container(
       // constraints: BoxConstraints.expand(),
@@ -16,9 +16,12 @@ class UpperPage extends StatelessWidget {
           Positioned(
             left: 0,
             right: 0,
-            child: Image.asset(
-              "assets/images/upper-back-ground.png",
-              fit: BoxFit.cover,
+            child: Opacity(
+              opacity: 0.45,
+              child: Image.asset(
+                "assets/images/upper-back-ground.png",
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Row(
@@ -37,7 +40,6 @@ class UpperPage extends StatelessWidget {
           //     fit: BoxFit.none,
           //   ),
           // ),
-          
         ],
       ),
     );

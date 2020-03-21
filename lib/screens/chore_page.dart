@@ -43,8 +43,8 @@ class ChorePage extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: _screenSize.height / 10,
-              top: _screenSize.height / 10,
+              bottom: _screenSize.height / 12,
+              top: _screenSize.height / 12,
               child: Column(
                 children: [
                   ChoreView(sleeping),

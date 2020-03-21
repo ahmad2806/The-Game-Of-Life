@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:the_game/models/instruction.dart';
 import 'package:the_game/screens/chore_page.dart';
+import 'package:the_game/screens/instruction_screen.dart';
+import 'package:the_game/screens/profile_page.dart';
 import 'package:the_game/screens/upper_page.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,7 +18,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                height: MediaQuery.of(context).size.height / 2.5,
+                height: MediaQuery.of(context).size.height / 3,
 // Also Including Tab-bar height.
                 child: UpperPage(),
               ),
@@ -25,16 +28,16 @@ class HomePage extends StatelessWidget {
                 child: TabBarView(
                   children: [
                     Container(
-                      color: Colors.deepOrange,
-                      child: Center(child: Text('Tab1')),
+                      
+                      child: InstructionScreen(Instruction.getSample()),
                     ),
                     Container(
                       color: Color.fromRGBO(237, 237, 237, 1),
                       child: ChorePage(),
                     ),
                     Container(
-                      color: Colors.yellowAccent,
-                      child: Center(child: Text('Tab3')),
+                      color: Color.fromRGBO(237, 237, 237, 1),
+                      child: ProfilePage(),
                     ) // class name
                   ],
                 ),
